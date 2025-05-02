@@ -1,0 +1,61 @@
+/** Media Queries **/
+@mixin telefono {
+    @media (max-width: #{$telefono}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin desbordado {
+    @media (max-width: #{$desbordado}) {
+        @content;
+    }
+}
+
+
+
+
+@mixin desbordado2 {
+    @media (max-width: #{$desbordado2}) {
+        @content;
+    }
+}
+
+@mixin intermedio {
+    @media (max-width: #{$intermedio}) {
+        @content;
+    }
+}
+  
+@mixin desktop {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+}
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin boton($bgColor, $display ) {
+    background-color: $bgColor;
+    color: $blanco;
+    border-radius: 15px;
+    font-weight: $bold;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    display: $display;
+    border: none;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: darken($bgColor, 6);
+        cursor: pointer;
+    }
+}

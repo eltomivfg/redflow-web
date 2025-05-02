@@ -1,0 +1,132 @@
+.containerInfoFORM{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid $gris;
+
+    h2{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: $bold;
+    }
+
+    p{
+
+        font-size: 1.8rem;
+        text-align: start;
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        b{
+            color: $amarillo;
+        }
+    }
+
+}
+
+.password-container {
+    position: relative;
+    margin-bottom: 20px; /* Ajusta el espaciado entre los contenedores de contraseña */
+
+    input[type="password"] {
+        padding-right: 30px; /* Espacio para el ícono del ojo */
+    }
+
+    i.fa-eye,
+    i.fa-eye-slash {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        font-size: 18px; /* Tamaño del ícono, ajusta según tus necesidades */
+        cursor: pointer;
+    }
+
+
+
+    // Estilos para el ícono del ojo con línea
+    i.show-password::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 2px;
+        height: 10px;
+        background-color: #000;
+    }
+}
+
+
+
+
+.containerForm{
+    margin-bottom: 50px;
+    h1{
+        text-align: center;
+    }
+
+    .form{
+
+        @include desktop{
+            width: 80%;
+        }
+
+        border: 1px solid $gris;
+        justify-content: space-between;
+        border-radius: 15px;
+        padding: 10px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: auto;
+        min-height: 250px;
+
+        span{
+            text-align: end;
+            margin-top: 8px;
+            color: $grisMedio;
+            a{
+                color: $grisMedio;
+                text-decoration: underline;
+            }
+        }
+
+        input{
+            transition: .3s;
+            color: white;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: $amarillo;  
+            border: none;
+            color: white;
+            &:hover{
+                background-color: $amarilloOscuro;
+            }
+        }
+
+        div{
+            margin-top: 0px;
+            display: flex;
+            flex-direction: column;
+            input{
+                color: black;
+                background-color: white;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid black;
+                &:hover{
+                    background-color: white;
+                }
+
+            }
+        }
+
+
+    }
+
+}
+

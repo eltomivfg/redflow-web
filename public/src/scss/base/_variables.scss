@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// Fuentes
+$fuente_principal: 'Rubik', sans-serif;
+
+
+// Tamaño de Media Queries
+$telefono: 645px;
+$tablet: 768px;
+$intermedio: 900px;
+$desbordado: 1220px; 
+$desbordado2: 1500px;
+$desktop: 1024px;
+
+
+// Colores
+
+$negro: #000000;
+$amarillo: #ffb300;
+$amarilloOscuro: #d79e00;
+$naranja: #ff9500;
+$verde: #71B100;
+$blanco: #FFFFFF;
+$gris: #e1e1e1;
+$grisMedio: rgb(164, 164, 164);
+$grisOscuro: #333333;
+$rojo: rgb(255, 0, 0);
+$rojoOscuro: rgb(177, 4, 4);
+
+
+$violetaOscuro: #332B47;
+$violetaOscuroMedio: #524571;
+$violetaMedio: #705E9C;
+$violetaClarito: #8F78C6;
+$violetaClaro: #AD92F1;
+$violetaMUYClaro:rgb(207, 188, 255);
+$violetaBLACK: #14111C;
+
+$separacion: 5rem;
+
+// Fuentes
+
+$delgada: 300;
+$regular : 400;
+$bold: 700;
+$black: 900

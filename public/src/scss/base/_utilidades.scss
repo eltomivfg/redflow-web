@@ -1,0 +1,69 @@
+.marginTop{
+    margin-top: 20px;
+}
+
+.marginLeft{
+    margin-left: 20px;
+}
+
+.marginRight{
+    margin-right: 20px;
+}
+
+.marginBottom{
+    margin-bottom: 50px;
+}
+.marginBottom2{
+    margin-bottom: 10px;
+}
+
+.marginIconRight{
+    margin-right: 10px;
+}
+
+.marginIconLeft{
+    margin-left: 10px;
+}
+
+
+
+
+.seccion {
+    margin-top: $separacion / 2;
+    margin-bottom: $separacion / 2;
+}
+
+
+.contenido-centrado {
+    max-width: 80rem;
+}
+
+.centrarText{
+    text-align: center;
+}
+
+.colorP{
+    color: #767676;
+}
+
+
+.alinear-derecha {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.w100{
+    width: 100%;
+}
+
+.bold{
+    font-weight: $bold                                      ;
+}
+
+.anotacion{
+    color: $grisMedio;
+}
+
+.resaltar{
+    font-weight: $bold;
+}
