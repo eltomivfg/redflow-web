@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -11,6 +10,7 @@ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 /* Sections
@@ -578,33 +578,6 @@ h4 {
   color: #ffb300;
 }
 
-.password-container {
-  position: relative;
-  margin-bottom: 20px; /* Ajusta el espaciado entre los contenedores de contraseña */
-}
-.password-container input[type=password] {
-  padding-right: 30px; /* Espacio para el ícono del ojo */
-}
-.password-container i.fa-eye,
-.password-container i.fa-eye-slash {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  font-size: 18px; /* Tamaño del ícono, ajusta según tus necesidades */
-  cursor: pointer;
-}
-.password-container i.show-password::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 2px;
-  height: 10px;
-  background-color: #000;
-}
-
 .containerForm {
   margin-bottom: 50px;
 }
@@ -619,9 +592,10 @@ h4 {
   background-color: white;
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 70%;
   margin: auto;
-  min-height: 250px;
+  min-height: 450px;
+  border: 1px solid rgb(167, 167, 167);
 }
 @media (max-width: 1024px) {
   .containerForm .form {
@@ -642,12 +616,20 @@ h4 {
   color: white;
   padding: 10px;
   border-radius: 15px;
-  background-color: #ffb300;
+  background-color: rgb(182, 3, 3);
   border: none;
   color: white;
 }
 .containerForm .form input:hover {
-  background-color: #d79e00;
+  cursor: pointer;
+  background-color: rgb(83, 0, 0);
+}
+.containerForm .form textarea {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  height: 150px;
 }
 .containerForm .form div {
   margin-top: 0px;
@@ -675,9 +657,6 @@ h4 {
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url(../../src/imgs/header.jpg);
-  box-shadow: -2px 25px 111px -7px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: -2px 25px 111px -7px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -2px 25px 111px -7px rgba(0, 0, 0, 0.75);
 }
 .header nav {
   display: flex;
@@ -728,6 +707,87 @@ h4 {
 .header .containerTextHeader p span {
   font-size: 40px;
   color: rgb(167, 60, 60);
+}
+
+.main {
+  margin: auto;
+}
+.main h1 {
+  font-weight: bold;
+}
+.main .container-cards-main {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+  margin-bottom: 50px;
+  width: 65%;
+}
+.main .card-main {
+  box-shadow: 1px 17px 36px -11px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 17px 36px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 17px 36px -11px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  background-color: rgb(236, 236, 236);
+  width: 350px;
+  height: 450px;
+  border-radius: 15px;
+  border: 1px solid black;
+  padding: 10px;
+  transition: 0.4s;
+}
+.main .card-main:hover {
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+}
+.main .card-main h2 {
+  margin-bottom: 0px;
+  line-height: 1;
+  font-weight: bold;
+}
+.main .card-main p {
+  margin: 0;
+}
+.main .card-main img {
+  width: 150px;
+}
+.main .container-main-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../../src/imgs/banner.jpg);
+  height: 450px;
+}
+.main .container-main-banner h1 {
+  text-shadow: 1px 7px 13px rgba(0, 0, 0, 0.932);
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+}
+.main .container-main-banner a {
+  text-shadow: 1px 7px 13px rgba(0, 0, 0, 0.69);
+  background-color: red;
+  border-radius: 15px;
+  font-size: 25px;
+  padding: 10px 30px;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.main .container-main-banner a:hover {
+  background-color: rgb(121, 0, 0);
 }
 
 /*# sourceMappingURL=app.css.map */
