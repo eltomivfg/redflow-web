@@ -1,4 +1,4 @@
-.main{
+.section{
 
     margin: auto;
 
@@ -92,5 +92,31 @@ h1{
         }
     }
 }
+
+.containerPartnersHome{
+    @include grid(5, 2rem);
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+
+    img{
+        width: 100px;
+        top: 0px;
+        border-radius: 5px;
+        box-shadow: 1px 17px 36px -11px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 1px 17px 36px -11px rgba(0,0,0,0.75);
+        -moz-box-shadow: 1px 17px 36px -11px rgba(0,0,0,0.75);
+        transition: top 0.3s ease;
+
+        &:hover{
+            position: relative;
+            top: -10px;
+        }
+    }
+
+    margin-bottom: 200px;
+}
+
 
 }

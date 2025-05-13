@@ -1,0 +1,15 @@
+.footer{
+    background: linear-gradient(90deg,rgb(32, 32, 32) 0%, rgb(51, 51, 51) 29%, rgba(13, 13, 13, 1) 87%, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 1) 100%);
+
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p{
+        color: white;
+        font-weight: bold;
+        margin: 0;
+    }
+}

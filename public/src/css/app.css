@@ -653,10 +653,6 @@ h4 {
   height: 600px;
   text-align: center;
   align-items: center;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-image: url(../../src/imgs/header.jpg);
 }
 .header nav {
   display: flex;
@@ -708,14 +704,21 @@ h4 {
   font-size: 40px;
   color: rgb(167, 60, 60);
 }
+.header.headerB {
+  height: 140px;
+  background: none;
+}
+.header.headerB .containerTextHeader h1, .header.headerB .containerTextHeader p {
+  display: none;
+}
 
-.main {
+.section {
   margin: auto;
 }
-.main h1 {
+.section h1 {
   font-weight: bold;
 }
-.main .container-cards-main {
+.section .container-cards-main {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
@@ -723,7 +726,7 @@ h4 {
   margin-bottom: 50px;
   width: 65%;
 }
-.main .card-main {
+.section .card-main {
   box-shadow: 1px 17px 36px -11px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 17px 36px -11px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 17px 36px -11px rgba(0, 0, 0, 0.75);
@@ -741,22 +744,22 @@ h4 {
   padding: 10px;
   transition: 0.4s;
 }
-.main .card-main:hover {
+.section .card-main:hover {
   cursor: pointer;
   background-color: rgb(255, 255, 255);
 }
-.main .card-main h2 {
+.section .card-main h2 {
   margin-bottom: 0px;
   line-height: 1;
   font-weight: bold;
 }
-.main .card-main p {
+.section .card-main p {
   margin: 0;
 }
-.main .card-main img {
+.section .card-main img {
   width: 150px;
 }
-.main .container-main-banner {
+.section .container-main-banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -770,13 +773,13 @@ h4 {
   background-image: url(../../src/imgs/banner.jpg);
   height: 450px;
 }
-.main .container-main-banner h1 {
+.section .container-main-banner h1 {
   text-shadow: 1px 7px 13px rgba(0, 0, 0, 0.932);
   font-weight: bold;
   font-size: 50px;
   color: white;
 }
-.main .container-main-banner a {
+.section .container-main-banner a {
   text-shadow: 1px 7px 13px rgba(0, 0, 0, 0.69);
   background-color: red;
   border-radius: 15px;
@@ -786,8 +789,111 @@ h4 {
   font-weight: bold;
   transition: 0.3s;
 }
-.main .container-main-banner a:hover {
+.section .container-main-banner a:hover {
   background-color: rgb(121, 0, 0);
+}
+.section .containerPartnersHome {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 200px;
+}
+.section .containerPartnersHome img {
+  width: 100px;
+  top: 0px;
+  border-radius: 5px;
+  box-shadow: 1px 17px 36px -11px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 17px 36px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 17px 36px -11px rgba(0, 0, 0, 0.75);
+  transition: top 0.3s ease;
+}
+.section .containerPartnersHome img:hover {
+  position: relative;
+  top: -10px;
+}
+
+.footer {
+  background: linear-gradient(90deg, rgb(32, 32, 32) 0%, rgb(51, 51, 51) 29%, rgb(13, 13, 13) 87%, rgb(0, 0, 0) 100%, rgb(0, 0, 0) 100%);
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer p {
+  color: white;
+  font-weight: bold;
+  margin: 0;
+}
+
+.containerServices {
+  margin-bottom: 150px;
+  width: 90%;
+}
+.containerServices .service {
+  background-color: orange;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  min-height: 250px;
+}
+.containerServices .service h2 {
+  color: white;
+  font-weight: bold;
+  text-align: start;
+  margin: 0;
+}
+.containerServices .service h2 i {
+  color: rgb(255, 226, 172);
+}
+.containerServices .service p {
+  color: white;
+  text-align: start;
+  margin: 0;
+}
+.containerServices .service p span {
+  font-weight: bold;
+}
+.containerServices .service a {
+  width: 200px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: white;
+  text-align: center;
+  border-radius: 15px;
+  color: black;
+  font-weight: bold;
+  transition: 0.4s;
+}
+.containerServices .service a:hover {
+  background-color: rgb(236, 236, 236);
+}
+
+.aboutUs {
+  width: 90%;
+}
+.aboutUs p {
+  text-align: start;
+  font-size: 22px;
+}
+.aboutUs p span {
+  font-weight: bold;
+}
+.aboutUs h2 {
+  text-align: start;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.aboutUs ul li {
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=app.css.map */
