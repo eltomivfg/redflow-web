@@ -13,6 +13,10 @@ html {
   overflow-x: hidden;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* Sections
    ========================================================================== */
 /**
@@ -555,96 +559,56 @@ h4 {
 }
 
 /** UI **/
-.containerInfoFORM {
-  background-color: white;
-  width: 80%;
-  margin: auto;
-  padding: 10px;
-  border-radius: 15px;
-  border: 1px solid #e1e1e1;
-}
-.containerInfoFORM h2 {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-weight: 700;
-}
-.containerInfoFORM p {
-  font-size: 1.8rem;
-  text-align: start;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-.containerInfoFORM p b {
-  color: #ffb300;
-}
-
-.containerForm {
-  margin-bottom: 50px;
-}
-.containerForm h1 {
-  text-align: center;
-}
-.containerForm .form {
-  border: 1px solid #e1e1e1;
-  justify-content: space-between;
-  border-radius: 15px;
-  padding: 10px;
-  background-color: white;
+.form {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  margin: auto;
-  min-height: 450px;
-  border: 1px solid rgb(167, 167, 167);
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  color: #333;
+  margin-bottom: 200px;
 }
-@media (max-width: 1024px) {
-  .containerForm .form {
-    width: 80%;
-  }
+.form h1 {
+  margin-bottom: 1.5rem;
+  color: #ff6600;
+  font-weight: bold;
 }
-.containerForm .form span {
-  text-align: end;
-  margin-top: 8px;
-  color: rgb(164, 164, 164);
+.form label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
-.containerForm .form span a {
-  color: rgb(164, 164, 164);
-  text-decoration: underline;
-}
-.containerForm .form input {
-  transition: 0.3s;
+.form button {
+  margin-top: 1.5rem;
+  background-color: #ff6600;
   color: white;
-  padding: 10px;
-  border-radius: 15px;
-  background-color: rgb(182, 3, 3);
   border: none;
-  color: white;
-}
-.containerForm .form input:hover {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
-  background-color: rgb(83, 0, 0);
+  transition: all 0.3s ease;
 }
-.containerForm .form textarea {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  height: 150px;
+.form button:hover {
+  background-color: rgb(204, 81.6, 0);
 }
-.containerForm .form div {
-  margin-top: 0px;
-  display: flex;
-  flex-direction: column;
+.form input, .form textarea, .form select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
-.containerForm .form div input {
-  color: black;
-  background-color: white;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid black;
-}
-.containerForm .form div input:hover {
-  background-color: white;
+.form input:focus, .form textarea:focus, .form select:focus {
+  border-color: #ff6600;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
 }
 
 .header {
@@ -653,6 +617,12 @@ h4 {
   height: 600px;
   text-align: center;
   align-items: center;
+}
+.header.header-inicio {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../imgs/header.jpg);
 }
 .header nav {
   display: flex;
@@ -726,6 +696,13 @@ h4 {
   margin-bottom: 50px;
   width: 65%;
 }
+@media (max-width: 1500px) {
+  .section .container-cards-main {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .section .card-main {
   box-shadow: 1px 17px 36px -11px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 17px 36px -11px rgba(0, 0, 0, 0.75);
@@ -743,10 +720,14 @@ h4 {
   border: 1px solid black;
   padding: 10px;
   transition: 0.4s;
+  top: 0px;
+  transition: top 0.3s ease;
+  position: relative;
 }
 .section .card-main:hover {
   cursor: pointer;
   background-color: rgb(255, 255, 255);
+  top: -10px;
 }
 .section .card-main h2 {
   margin-bottom: 0px;
@@ -799,8 +780,16 @@ h4 {
   margin: auto;
   width: 50%;
   text-align: center;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 200px;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .section .containerPartnersHome {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .section .containerPartnersHome img {
   width: 100px;
@@ -894,6 +883,54 @@ h4 {
 }
 .aboutUs ul li {
   font-size: 18px;
+}
+
+.section h1 span {
+  color: rgb(175, 115, 3);
+}
+.section .containerObjetives {
+  margin: 100px auto;
+  width: 90%;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1500px) {
+  .section .containerObjetives {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .section .containerObjetives {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.section .containerObjetives .objetives {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: orange;
+  padding: 10px;
+  border-radius: 15px;
+  height: 200px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.section .containerObjetives .objetives:hover {
+  background-color: rgb(212, 138, 0);
+}
+.section .containerObjetives .objetives h2 {
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  font-size: 20px;
+}
+.section .containerObjetives .objetives p {
+  color: rgb(231, 231, 231);
 }
 
 /*# sourceMappingURL=app.css.map */

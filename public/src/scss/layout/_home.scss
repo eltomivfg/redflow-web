@@ -9,6 +9,11 @@ h1{
 
 .container-cards-main{
     @include grid(3, 2rem);
+
+    @include desbordado2{
+        @include grid(1, 2rem);
+    }
+        
     margin: auto;
     margin-bottom: 50px;
     
@@ -32,10 +37,17 @@ h1{
     border: 1px solid black;
     padding: 10px;
     transition: .4s;
+    top: 0px;
+    transition: top 0.3s ease;
+    position: relative;
+
+
+
 
     &:hover{
         cursor:pointer;
         background-color: rgb(255, 255, 255);
+        top: -10px;
     }
 
     h2{
@@ -95,9 +107,14 @@ h1{
 
 .containerPartnersHome{
     @include grid(5, 2rem);
+
+   @include tablet{
+       @include grid(1, 2rem);
+   }
     margin: auto;
     width: 50%;
     text-align: center;
+    justify-content: center;
     align-items: center;
 
     img{
@@ -115,7 +132,7 @@ h1{
         }
     }
 
-    margin-bottom: 200px;
+    margin-bottom: 50px;
 }
 
 

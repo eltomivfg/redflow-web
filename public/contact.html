@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/app.css" >
+
+    <!--Scripts-->
+    <script src="https://kit.fontawesome.com/8c8af71867.js" crossorigin="anonymous"></script>
+    <!--Scripts-->
+    
+    <title>RedFlow</title>
+</head>
+<body>
+    
+    <header class="header headerB">
+        <nav>
+            <img src="src/imgs/logo.png">
+            <div class="containerNavHeader">
+                <a href="index.html">Inicio</a>
+                <a href="services.html">Servicios</a>
+                <a href="about-us.html">Sobre Nosotros</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+        </nav>
+        <div class="containerTextHeader">
+            <h1>Mantenimiento de Redes</h1>
+            <p><span>Red Flow</span> Tu empresa de confianza.</p>
+        </div>
+    </header>
+
+    <main >
+
+        <form class="form">
+          <h2>Contáctanos</h2>
+        
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+        
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+        
+          <label for="phone">Número de teléfono</label>
+          <input type="tel" id="phone" name="phone" placeholder="Ej: 11 2345 6789" required>
+        
+          <label for="service">Servicio requerido</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Selecciona un servicio</option>
+            <option>Instalación y Configuración de Redes</option>
+            <option>Mantenimiento Preventivo y Correctivo</option>
+            <option>Configuración de Servidores</option>
+            <option>Seguridad de Red</option>
+            <option>Soporte Remoto</option>
+            <option>Instalación y Configuración de CCTV</option>
+            <option>Optimización de Red</option>
+            <option>Instalación de Proxmox y Virtualización</option>
+            <option>Configuración de Mikrotik</option>
+            <option>Auditoría de Red</option>
+            <option>Otro</option>
+          </select>
+      
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      
+          <button type="submit">Enviar</button>
+        </form>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Red Flow. Todos los derechos reservados.</p>
+        <p>Email: contacto@redflow.com</p>
+</footer>
+
+
+
+
+
+</body>
+</html>

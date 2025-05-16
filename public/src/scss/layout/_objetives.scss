@@ -1,0 +1,50 @@
+.section{
+
+    h1{
+        span{
+            color: rgb(175, 115, 3);
+        }
+    }
+    .containerObjetives{
+        margin: 100px auto;
+        width: 90%;
+        @include grid(3, 2rem);
+
+        @include desbordado2{
+            @include grid(2, 2rem);
+        }
+        
+        @include intermedio{
+            @include grid(1, 2rem);
+        }
+
+    .objetives{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: orange;
+        padding: 10px;
+        border-radius: 15px;
+        height: 200px;
+        transition: .4s;
+        cursor: pointer;
+        
+        &:hover{
+            background-color: rgb(212, 138, 0);
+        }
+
+        h2{
+            color: white;
+            font-weight: bold;
+            margin: 0;
+            font-size: 20px;
+        }
+        p{
+            color: rgb(231, 231, 231);
+        }
+    }
+
+    }
+}
+

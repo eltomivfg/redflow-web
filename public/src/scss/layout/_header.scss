@@ -7,6 +7,12 @@
     align-items: center;
 
 
+&.header-inicio{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../imgs/header.jpg);
+}
 
 
     nav{
